@@ -1,0 +1,443 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    --green: #60bb28;
+    --red: #cf3031;
+    --yellow: #ffbd48;
+    --pink: #ffd4c9;
+    --white-200: #ffeae5;
+    --white: #fff;
+    --gray: #616161;
+    --gray-200: #2e2e2e;
+    --white-300: #fafafa
+}
+
+h1, h2, h3, h5 {
+    font-weight: 600;
+}
+
+.bg-hero {
+    background-image: url(/assets/img/banner.png); 
+    background-attachment: fixed;
+    background-size: cover;
+    height: 80vh;
+}
+h1 {
+    font-size: 6rem;
+    line-height: 12.1rem;
+    color: var(--white);
+}
+
+.yellow-color {
+    color: var(--yellow);
+}
+
+.red-color {
+    color: var(--red);
+}
+
+.green-color {
+    color: var(--green);
+}
+
+.fish, .plant, .mashroom, .tomato, .leaf, .pepper {
+    position: absolute;
+}
+
+.plant {
+    filter: drop-shadow(.1rem .5rem 1rem rgba(0,0,0, .24));
+    left: 0;
+    top: -4rem;
+}
+
+.fish {
+    filter: drop-shadow(.4rem .2rem .6rem rgba(0,0,0, .43));
+    left: 40rem;
+    top: 4rem;
+}
+
+.mashroom {
+    filter: drop-shadow(.4rem .1rem .6rem rgba(0,0,0, .25));
+    right: 25rem;
+    top: 7.8rem;
+}
+
+.tomato {
+    bottom: -15rem;
+    right: 20rem;
+    z-index: 9999;
+}
+
+.pepper {
+    bottom: -5rem;
+    left: 8rem;
+}
+
+.leaf {
+    bottom: 10rem;
+    filter: drop-shadow(.2rem .2rem .7rem rgba(0,0,0,.45));
+    right: 19.7rem;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.3rem;
+    line-height: 4.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.container {
+    padding: 7rem 1.5rem 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+#best-seller {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 256px);
+    justify-content: space-between;
+    margin-top: 9rem;
+}
+
+.card {
+    align-items: center;
+    background-color: var(--white-200);
+    border-radius: 1.5rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+    position: relative;
+    width: 16rem;
+    height: 100%;
+    z-index: 999;
+}
+
+.card-image-container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+}
+
+.pizza-image {
+    position: absolute;
+    top: -4rem;
+}
+
+.like-pizza-image {
+    align-items: center;
+    background-color: var(--pink);
+    border: .15rem solid var(--red);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0.65rem;
+    position: absolute;
+    right: 0.8rem;
+    top: -1.5rem;
+    transition: .4s ease;
+}
+
+.like-pizza-image:hover {
+    background-color: var(--yellow);
+}
+
+.card-info-container {
+    margin-top: 4.5rem;
+    text-align: center;
+}
+
+.card-info-container p {
+    color: var(--gray);
+    margin-top: .5rem;
+}
+
+.card-price {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 2.5rem;
+    color: var(--gray-200);
+    cursor: pointer;
+    font-weight: 600;
+    transition: .4s ease;
+}
+
+.btn-card {
+    font-size: 0.88rem;
+    bottom: -1.5rem;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+}
+
+.btn-card:hover {
+    opacity: 0.8;
+    background-color: var(--yellow);
+}
+
+.testimonial {
+    background-color: var(--white-300);
+    margin-top: 11rem;
+    width: 100%;
+    height: 28rem;
+}
+
+h5 {
+    color: #000;
+}
+
+.carousel-img {
+    border-radius: 50%;
+    width: 7rem; 
+    height: 7rem; 
+    object-fit: cover;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -40%);
+}
+
+.carousel-img img { 
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.carousel-caption {
+    top: 6rem;
+    left: 4rem;
+    transform: translate(-3.5%, 0);
+    text-align: center;
+    bottom: auto;
+    padding: 50px 0;
+} 
+
+.carousel-caption p {
+    height: 3.5rem;
+    color:var(--gray);
+}
+
+.carousel-indicators {
+    top: 104%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 0.5rem;
+    height: 0.5rem; 
+    border-radius: 50%;
+    border: 1px solid #fff; 
+    background-color: #555;
+    margin: 0 5px; 
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+.about {
+    padding: 0;
+}
+
+.about-image-container {
+    background: url(/assets/img/image.png);
+    background-position: 50%;
+    background-size: cover;
+    border-radius: .4rem;
+    height: 33rem;
+    position: relative;
+    width: 120rem;
+}
+
+.about-image-container .about-pizza-image {
+    border-radius: 50%;
+    left: -5rem;
+    top: 2.2rem;
+}
+
+.about-info {
+    max-width: 56rem;
+    padding: 0 1.5rem;
+}
+
+.about-info h2 {
+    padding-bottom: 0;
+    text-align: left;
+}
+
+.about-info p {
+    color: var(--gray-200);
+    line-height: 1.7rem;
+    margin-top: 1.5rem;
+}
+
+.read-more-btn {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    padding: 0.6rem 2.2rem;
+}
+
+.read-more-btn:hover {
+    background-color: var(--yellow);
+    opacity: 0.8;
+}
+
+.about-pizza-taker-image {
+    bottom: 5rem;
+    position: absolute;
+    right: 50rem;
+}
+
+.about-pizza-taker-image img {
+    left: 18rem;
+    bottom: -3rem;
+    position: absolute;
+}
+
+.about .container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 14rem 1.5rem 2rem;
+    gap: 5rem;
+}
+
+@media (max-width: 1055px) {
+    main {
+        padding-bottom: 0;
+    }
+    .leaf {
+        right: 6rem;
+        bottom: 17rem;
+    }
+    #best-seller {
+        row-gap: 11.5rem;
+        margin: 0 10rem;
+    }
+    .about .container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .about-image-container {
+        width: 100%;
+    }
+    .about-info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1490px) {
+    .pepper {
+        display: none;
+    }
+}
+
+@media (max-width: 1250px) {
+    .about-pizza-taker-image {
+        display: none;
+    }
+}
+
+@media (max-width: 1629px) {
+    .fish {
+        left: 10rem;
+    }
+    .mashroom, .tomato {
+        right: 11rem;
+    }
+    .pepper {
+        left: 5rem;
+    }
+    .about-pizza-taker-image {
+        right: 30rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .bg-hero{
+      height: 50vh;
+      background-size: auto;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 799px) {
+    .container {
+      height: 100%;
+      margin: 0 auto;
+      max-width: 112rem;
+      padding: 4rem .5rem 2rem;
+    }
+    .leaf, .tomato,
+    .mashroom, .fish, .plant,
+    .about-image-container {
+        display: none;
+    }
+    h2 {
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+    }
+    #best-seller {
+        justify-content: space-around;
+        grid-template-columns: 266px;
+    }
+    .testimonial {
+        height: 55vh;
+    }
+    .section-heading {
+        line-height: 2rem;
+        text-align: center;
+    }
+    .carousel-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: -1rem;
+        height: 35vh;
+    }
+    .carousel-item {
+        text-align: center;
+        margin-top: 0;
+        width: auto;
+        padding: 0 15px;
+        margin-right: -10%;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 80px; 
+        left: auto; 
+        right: auto; 
+        transition: translateY(-50%);
+        z-index: 1;
+        padding: 1rem; 
+    }
+    .carousel-caption p {
+        margin-bottom: 0;
+    }
+    .carousel-img {
+        width: 90px;
+        height: 90px;
+        top: 0;
+        bottom: 1.5rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translate(-10%, -40%);
+    }
+}
